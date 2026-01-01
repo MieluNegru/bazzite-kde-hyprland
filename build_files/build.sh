@@ -35,7 +35,6 @@ dnf5 -y install hyprlock
 dnf5 -y install hyprsunset
 dnf5 -y install hyprland
 dnf5 -y install waybar
-dnf5 -y install hyprland-qt-support
 dnf5 -y install hyprland-qtutils
 dnf5 -y install xdg-desktop-portal-hyprland
     
