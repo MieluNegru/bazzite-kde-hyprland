@@ -36,4 +36,3 @@ dnf5 -y install    \
 
 
 systemctl enable podman.socket
-systemctl --global enable hyprpanel.service
