@@ -14,18 +14,31 @@ dnf5 install -y tmux
 
 # Using COPR to install hyprland and related packages for creating a desktop environment
 dnf5 -y copr enable solopasha/hyprland
-dnf5 -y install                  \
-    hyprland                     \
-    hyprpaper                    \
-    hyprpicker                   \
-    hypridle                     \
-    hyprlock                     \
-    hyprsunset                   \
-    hyprland                     \
-    waybar                       \
-    hyprland-qt-support          \
-    hyprland-qtutils             \
-    xdg-desktop-portal-hyprland
+# dnf5 -y install                  \
+#     hyprland                     \
+#     hyprpaper                    \
+#     hyprpicker                   \
+#     hypridle                     \
+#     hyprlock                     \
+#     hyprsunset                   \
+#     hyprland                     \
+#     waybar                       \
+#     hyprland-qt-support          \
+#     hyprland-qtutils             \
+#     xdg-desktop-portal-hyprland
+
+dnf5 -y install hyprland
+dnf5 -y install hyprpaper
+dnf5 -y install hyprpicker
+dnf5 -y install hypridle
+dnf5 -y install hyprlock
+dnf5 -y install hyprsunset
+dnf5 -y install hyprland
+dnf5 -y install waybar
+dnf5 -y install hyprland-qt-support
+dnf5 -y install hyprland-qtutils
+dnf5 -y install xdg-desktop-portal-hyprland
+    
 dnf5 -y copr disable solopasha/hyprland
 
 # Installing more desktop utils
