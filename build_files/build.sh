@@ -21,7 +21,8 @@ dnf5 -y install                  \
     hypridle                     \
     hyprlock                     \
     hyprsunset                   \
-    hyprpanel                    \
+    hyprland                     \
+    waybar                       \
     hyprland-qt-support          \
     hyprland-qtutils             \
     xdg-desktop-portal-hyprland
