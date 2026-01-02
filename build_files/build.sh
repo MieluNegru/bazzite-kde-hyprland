@@ -27,6 +27,17 @@ dnf5 -y install                  \
 
 dnf5 -y copr disable solopasha/hyprland
 
+# Installing sevaral java installations
+dnf5 -y install adoptium-temurin-java-repository
+fedora-third-party enable
+
+dnf5 -y install                   \
+    java-25-openjdk-devel.x86_64  \
+    java-21-openjdk-devel.x86_64  \
+    temurin-17-jdk.x86_64         \
+    temurin-11-jdk.x86_64         \
+    temurin-8-jdk.x86_64
+
 # Installing more desktop utils
 dnf5 -y install    \
     alacritty      \
