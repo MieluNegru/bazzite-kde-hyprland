@@ -51,9 +51,6 @@ curl -L -o /tmp/nomachine.rpm \
 rpm-ostree install /tmp/nomachine.rpm
 rm -f /tmp/nomachine.rpm
 
-# Enable the service
-systemctl enable nxserver.service
-
 # Open port 4000 for NoMachine
 firewall-cmd --permanent --add-port=4000/tcp || true
 firewall-cmd --reload || true
