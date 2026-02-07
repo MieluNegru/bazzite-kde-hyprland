@@ -43,7 +43,20 @@ dnf5 -y install    \
     alacritty      \
     wofi           \
     brightnessctl
-    
+
+# Installing NoMachine
+curl -L -o /tmp/nomachine.rpm \
+    https://web9001.nomachine.com/download/9.3/Linux/nomachine_9.3.7_1_x86_64.rpm
+
+rpm-ostree install /tmp/nomachine.rpm
+rm -f /tmp/nomachine.rpm
+
+# Enable the service
+systemctl enable nxserver.service
+
+# Open port 4000 for NoMachine
+firewall-cmd --permanent --add-port=4000/tcp || true
+firewall-cmd --reload || true
 
 
 systemctl enable podman.socket
