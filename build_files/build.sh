@@ -39,10 +39,15 @@ dnf5 -y install                   \
     temurin-8-jdk.x86_64
 
 # Installing more desktop utils
-dnf5 -y install    \
-    alacritty      \
-    wofi           \
-    brightnessctl
+dnf5 -y install            \
+    alacritty              \    
+    blueman                \
+    brightnessctl          \
+    fontawesome-fonts      \
+    nerd-fonts             \
+    network-manager-applet \
+    pavucontrol            \
+    wofi                   \
 
 # Installing NoMachine
 # curl -L -o /tmp/nomachine.rpm \
