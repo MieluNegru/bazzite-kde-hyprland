@@ -16,6 +16,8 @@ dnf5 install -y tmux
 dnf5 -y copr enable solopasha/hyprland
 dnf5 -y install                  \
     hyprland                     \
+    hyprland-qtutils             \
+    hyprgraphics                 \
     hyprpaper                    \
     hyprpicker                   \
     hypridle                     \
@@ -44,21 +46,12 @@ dnf5 -y install            \
     blueman                \
     brightnessctl          \
     fontawesome-fonts      \
-    nerd-fonts             \
     network-manager-applet \
     pavucontrol            \
     wofi                   \
 
-# Installing NoMachine
-# curl -L -o /tmp/nomachine.rpm \
-#      https://web9001.nomachine.com/download/9.3/Linux/nomachine_9.3.7_1_x86_64.rpm
-
-# rpm-ostree install /tmp/nomachine.rpm
-# rm -f /tmp/nomachine.rpm
-
 # Open port 4000 for NoMachine
-firewall-cmd --permanent --add-port=4000/tcp || true
-firewall-cmd --reload || true
-
+# firewall-cmd --permanent --add-port=4000/tcp || true
+# firewall-cmd --reload || true
 
 systemctl enable podman.socket
