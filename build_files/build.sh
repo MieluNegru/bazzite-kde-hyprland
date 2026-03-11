@@ -16,8 +16,6 @@ dnf5 install -y tmux
 dnf5 -y copr enable solopasha/hyprland
 dnf5 -y install                  \
     hyprland                     \
-    hyprland-qtutils             \
-    hyprgraphics                 \
     hyprpaper                    \
     hyprpicker                   \
     hypridle                     \
