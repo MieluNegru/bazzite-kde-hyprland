@@ -40,7 +40,7 @@ dnf5 -y install                   \
 
 # Installing more desktop utils
 dnf5 -y install            \
-    alacritty              \    
+    alacritty              \
     blueman                \
     brightnessctl          \
     fontawesome-fonts      \
