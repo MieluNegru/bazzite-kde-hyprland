@@ -27,6 +27,11 @@ dnf5 -y install                  \
 
 dnf5 -y copr disable solopasha/hyprland
 
+# Installing keyd for key remapping
+dnf5 -y copr enable alternateved/keyd
+dnf5 -y install keyd
+dnf5 -y copr disable alternateved/keyd
+
 # Installing sevaral java installations
 dnf5 -y install adoptium-temurin-java-repository
 fedora-third-party enable
@@ -53,3 +58,4 @@ dnf5 -y install            \
 # firewall-cmd --reload || true
 
 systemctl enable podman.socket
+systemctl enable keyd
