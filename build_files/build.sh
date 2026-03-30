@@ -32,6 +32,11 @@ dnf5 -y copr enable alternateved/keyd
 dnf5 -y install keyd
 dnf5 -y copr disable alternateved/keyd
 
+#Installing Zellij
+dnf5 -y copr enable varlad/zellij 
+dnf5 -y install zellij
+dnf5 -y copr disable varlad/zellij 
+
 # Installing sevaral java installations
 dnf5 -y install adoptium-temurin-java-repository
 fedora-third-party enable
