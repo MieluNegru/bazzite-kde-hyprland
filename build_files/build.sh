@@ -2,6 +2,13 @@
 
 set -ouex pipefail
 
+echo "=== releasever debug ==="
+rpm -E %fedora
+cat /etc/os-release | grep VERSION_ID
+cat /etc/dnf/vars/releasever 2>/dev/null || echo "no releasever var"
+echo "========================"
+
+
 ### Install packages
 
 # Packages can be installed from any enabled yum repo on the image.
