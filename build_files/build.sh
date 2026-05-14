@@ -6,8 +6,6 @@ echo "=== releasever debug ==="
 rpm -E %fedora
 cat /etc/os-release | grep VERSION_ID
 cat /etc/dnf/vars/releasever 2>/dev/null || echo "no releasever var"
-dnf5 repoquery --enablerepo=updates-testing libdisplay-info
-dnf5 repoquery --repo='copr:...:solopasha:hyprland' --requires aquamarine-0.9.5-2.fc43 | grep displ?info
 echo "========================"
 
 
@@ -20,6 +18,9 @@ echo "========================"
 
 # this installs a package from fedora repos
 dnf5 install -y tmux 
+
+# libdisplay-info 0.3.x isn't in fc44 stable yet; aquamarine needs .so.2
+dnf5 -y --enablerepo=updates-testing install libdisplay-info
 
 # Using COPR to install hyprland and related packages for creating a desktop environment
 dnf5 -y copr enable solopasha/hyprland
