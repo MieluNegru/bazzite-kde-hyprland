@@ -49,12 +49,13 @@ dnf5 -y copr disable varlad/zellij
 dnf5 -y install adoptium-temurin-java-repository
 fedora-third-party enable
 
-dnf5 -y install                   \
-    java-25-openjdk-devel.x86_64  \
-    java-21-openjdk-devel.x86_64  \
-    temurin-17-jdk.x86_64         \
-    temurin-11-jdk.x86_64         \
-    temurin-8-jdk.x86_64
+
+dnf5 -y install \
+    java-25-openjdk-devel \
+    temurin-21-jdk \
+    temurin-17-jdk \
+    temurin-11-jdk \
+    temurin-8-jdk
 
 # Installing more desktop utils
 dnf5 -y install            \
