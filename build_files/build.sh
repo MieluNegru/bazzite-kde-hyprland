@@ -19,23 +19,21 @@ echo "========================"
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 
-# libdisplay-info 0.3.x isn't in fc44 stable yet; aquamarine needs .so.2
-dnf5 -y --enablerepo=updates-testing install libdisplay-info
-
+# Broken dependency tree for aquamarine for fedora-44. Killing Hyprland for now
 # Using COPR to install hyprland and related packages for creating a desktop environment
-dnf5 -y copr enable solopasha/hyprland
-dnf5 -y install                  \
-    hyprland                     \
-    hyprpaper                    \
-    hyprpicker                   \
-    hypridle                     \
-    hyprlock                     \
-    hyprsunset                   \
-    hyprland                     \
-    waybar                       \
-    xdg-desktop-portal-hyprland
-
-dnf5 -y copr disable solopasha/hyprland
+# dnf5 -y copr enable solopasha/hyprland
+# dnf5 -y install                  \
+#     hyprland                     \
+#     hyprpaper                    \
+#     hyprpicker                   \
+#     hypridle                     \
+#     hyprlock                     \
+#     hyprsunset                   \
+#     hyprland                     \
+#     waybar                       \
+#     xdg-desktop-portal-hyprland
+# 
+# dnf5 -y copr disable solopasha/hyprland
 
 # Installing keyd for key remapping
 dnf5 -y copr enable alternateved/keyd
