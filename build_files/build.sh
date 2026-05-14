@@ -7,6 +7,7 @@ rpm -E %fedora
 cat /etc/os-release | grep VERSION_ID
 cat /etc/dnf/vars/releasever 2>/dev/null || echo "no releasever var"
 dnf5 repoquery --enablerepo=updates-testing libdisplay-info
+dnf5 repoquery --repo='copr:...:solopasha:hyprland' --requires aquamarine-0.9.5-2.fc43 | grep displ?info
 echo "========================"
 
 
