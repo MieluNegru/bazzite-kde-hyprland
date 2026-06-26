@@ -10,6 +10,10 @@ echo "========================"
 
 echo '=== libdisplay-info diagnostic ==='
 rpm -q libdisplay-info || echo 'not installed'
+
+echo '=== libdisplay-info .so version ==='
+rpm -ql libdisplay-info | grep -i 'libdisplay-info\.so'
+
 dnf5 repoquery libdisplay-info --qf '%{name}-%{version}-%{release} from %{reponame}\n'
 dnf5 repoquery --whatprovides 'libdisplay-info.so.2()(64bit)' \
     --qf '%{name}-%{version}-%{release} from %{reponame}\n'
