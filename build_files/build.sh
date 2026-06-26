@@ -65,6 +65,7 @@ dnf5 -y install            \
     fontawesome-fonts      \
     network-manager-applet \
     pavucontrol            \
+    wireguard-tools        \
     wofi                   \
 
 # Open port 4000 for NoMachine
