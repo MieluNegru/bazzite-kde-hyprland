@@ -27,7 +27,8 @@ dnf5 -y install                  \
     hypridle                     \
     hyprlock                     \
     hyprsunset                   \
-    hyprland
+    hyprland                     \
+    xdg-desktop-portal-hyprland
 
 dnf5 -y copr disable lionheartp/Hyprland
 
@@ -63,8 +64,7 @@ dnf5 -y install                 \
     pavucontrol                 \
     waybar                      \
     wireguard-tools             \
-    wofi                        \
-    xdg-desktop-portal-hyprland
+    wofi
 
 # Open port 4000 for NoMachine
 # firewall-cmd --permanent --add-port=4000/tcp || true
