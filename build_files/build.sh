@@ -34,7 +34,7 @@ echo '=== end diagnostic ==='
 dnf5 install -y tmux 
 
 # Using COPR to install hyprland and related packages for creating a desktop environment
-dnf5 -y copr enable solopasha/hyprland
+dnf5 -y copr enable lionheartp/Hyprland
 dnf5 -y install                  \
     hyprland                     \
     hyprpaper                    \
@@ -42,11 +42,9 @@ dnf5 -y install                  \
     hypridle                     \
     hyprlock                     \
     hyprsunset                   \
-    hyprland                     \
-    waybar                       \
-    xdg-desktop-portal-hyprland
+    hyprland
 
-dnf5 -y copr disable solopasha/hyprland
+dnf5 -y copr disable lionheartp/Hyprland
 
 # Installing keyd for key remapping
 dnf5 -y copr enable alternateved/keyd
@@ -71,15 +69,17 @@ dnf5 -y install \
     temurin-8-jdk
 
 # Installing more desktop utils
-dnf5 -y install            \
-    alacritty              \
-    blueman                \
-    brightnessctl          \
-    fontawesome-fonts      \
-    network-manager-applet \
-    pavucontrol            \
-    wireguard-tools        \
-    wofi                   \
+dnf5 -y install                 \
+    alacritty                   \
+    blueman                     \
+    brightnessctl               \
+    fontawesome-fonts           \
+    network-manager-applet      \
+    pavucontrol                 \
+    waybar                      \
+    wireguard-tools             \
+    wofi                        \
+    xdg-desktop-portal-hyprland
 
 # Open port 4000 for NoMachine
 # firewall-cmd --permanent --add-port=4000/tcp || true
