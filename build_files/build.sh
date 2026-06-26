@@ -19,21 +19,20 @@ echo "========================"
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 
-# Broken dependency tree for aquamarine for fedora-44. Killing Hyprland for now
 # Using COPR to install hyprland and related packages for creating a desktop environment
-# dnf5 -y copr enable solopasha/hyprland
-# dnf5 -y install                  \
-#     hyprland                     \
-#     hyprpaper                    \
-#     hyprpicker                   \
-#     hypridle                     \
-#     hyprlock                     \
-#     hyprsunset                   \
-#     hyprland                     \
-#     waybar                       \
-#     xdg-desktop-portal-hyprland
-# 
-# dnf5 -y copr disable solopasha/hyprland
+dnf5 -y copr enable solopasha/hyprland
+dnf5 -y install                  \
+    hyprland                     \
+    hyprpaper                    \
+    hyprpicker                   \
+    hypridle                     \
+    hyprlock                     \
+    hyprsunset                   \
+    hyprland                     \
+    waybar                       \
+    xdg-desktop-portal-hyprland
+
+dnf5 -y copr disable solopasha/hyprland
 
 # Installing keyd for key remapping
 dnf5 -y copr enable alternateved/keyd
