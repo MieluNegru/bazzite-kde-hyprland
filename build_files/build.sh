@@ -8,6 +8,16 @@ cat /etc/os-release | grep VERSION_ID
 cat /etc/dnf/vars/releasever 2>/dev/null || echo "no releasever var"
 echo "========================"
 
+echo '=== libdisplay-info diagnostic ==='
+rpm -q libdisplay-info || echo 'not installed'
+dnf5 repoquery libdisplay-info --qf '%{name}-%{version}-%{release} from %{reponame}\n'
+dnf5 repoquery --whatprovides 'libdisplay-info.so.2()(64bit)' \
+    --qf '%{name}-%{version}-%{release} from %{reponame}\n'
+echo '=== excludes / versionlock ==='
+grep -rE 'exclude|versionlock' /etc/dnf/ /etc/yum.repos.d/ 2>/dev/null || true
+dnf5 versionlock list 2>/dev/null || true
+echo '=== end diagnostic ==='
+
 
 ### Install packages
 
