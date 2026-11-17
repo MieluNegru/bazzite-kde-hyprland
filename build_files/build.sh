@@ -62,7 +62,7 @@ dnf5 -y install                 \
     alacritty                   \
     blueman                     \
     brightnessctl               \
-    fontawesome-fonts           \
+    fontawesome-fonts-all       \
     network-manager-applet      \
     pavucontrol                 \
     waybar                      \
