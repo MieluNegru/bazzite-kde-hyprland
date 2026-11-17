@@ -18,6 +18,10 @@ echo "========================"
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 
+# Bazzite ships terra-xorg-x11-server-Xwayland, which doesn't satisfy hyprland's
+# arch-specific "xorg-x11-server-Xwayland(x86-64)" requirement. Swap it for Fedora's build.
+dnf5 -y swap terra-xorg-x11-server-Xwayland xorg-x11-server-Xwayland
+
 # Using COPR to install hyprland and related packages for creating a desktop environment
 dnf5 -y copr enable lionheartp/Hyprland
 dnf5 -y install                  \
@@ -27,7 +31,6 @@ dnf5 -y install                  \
     hypridle                     \
     hyprlock                     \
     hyprsunset                   \
-    hyprland                     \
     xdg-desktop-portal-hyprland
 
 dnf5 -y copr disable lionheartp/Hyprland
